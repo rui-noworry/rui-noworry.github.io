@@ -1853,6 +1853,16 @@ height：100%
 <blockquote>
 <p>如果设置box会对当前样式产生影响，再给他加一个父层</p>
 </blockquote>
+<h2 id="display-inline-block代替float-left"><a href="#display-inline-block代替float-left" class="headerlink" title="display:inline-block代替float:left"></a>display:inline-block代替float:left</h2><blockquote>
+<p>并排显示的inline-block元素，父层设置了font-size：0 letter-spacing：-3px子元素就会显示在一行，但在uc浏览器中可能也会折行，因为标签间的折行会起作</p>
+</blockquote>
+<ul>
+<li>解决去掉标签与标签之间的回车和空格</li>
+</ul>
+<h2 id="关于textarea实现文本的左对齐"><a href="#关于textarea实现文本的左对齐" class="headerlink" title="关于textarea实现文本的左对齐"></a>关于textarea实现文本的左对齐</h2><blockquote>
+<p>textarea会把开始标签到结束标签里的内容全部原样显示，包括空格和代码。</p>
+</blockquote>
+<p>例如：你的代码是这样写的：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;textarea rows=<span class="string">""</span> cols=<span class="string">""</span>&gt;   content&lt;/textarea&gt;，特别是我们不注意的时候：</div><div class="line">&lt;textarea rows=<span class="string">""</span> cols=<span class="string">""</span>&gt;content</div><div class="line">&lt;/textarea&gt;这样进行换行，也被看做是空格，所以也就不能实现对齐了，要想始终保持左对齐必须：</div><div class="line">&lt;textarea rows=<span class="string">""</span> cols=<span class="string">""</span>&gt;content&lt;/textarea&gt;这样没有空格</div></pre></td></tr></table></figure></p>
 
           
         
