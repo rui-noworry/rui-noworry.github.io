@@ -89,8 +89,8 @@ viewport的content各个值和属性width=device-width, // 页面宽度=设备�
 initial-scale = 1.0，// 初始缩放
 maximum-scale = 1.0, // 最大缩放
 user-scalable  = no // 用户是否能缩放
-rem与px转换技巧
-1">
+字体大小设置
+移动端页面">
 <meta property="og:type" content="article">
 <meta property="og:title" content="移动端开发注意事项">
 <meta property="og:url" content="http://yoursite.com/2016/09/30/css-mobile/index.html">
@@ -100,9 +100,9 @@ viewport的content各个值和属性width=device-width, // 页面宽度=设备�
 initial-scale = 1.0，// 初始缩放
 maximum-scale = 1.0, // 最大缩放
 user-scalable  = no // 用户是否能缩放
-rem与px转换技巧
-1">
-<meta property="og:updated_time" content="2016-11-23T03:12:34.504Z">
+字体大小设置
+移动端页面">
+<meta property="og:updated_time" content="2016-12-15T08:55:54.588Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移动端开发注意事项">
 <meta name="twitter:description" content="移动端web的基础知识（mobile）font-size == 12px （pc）约等于
@@ -110,8 +110,8 @@ viewport的content各个值和属性width=device-width, // 页面宽度=设备�
 initial-scale = 1.0，// 初始缩放
 maximum-scale = 1.0, // 最大缩放
 user-scalable  = no // 用户是否能缩放
-rem与px转换技巧
-1">
+字体大小设置
+移动端页面">
 
 
 
@@ -372,9 +372,15 @@ rem与px转换技巧
 initial-scale = 1.0，// 初始缩放
 maximum-scale = 1.0, // 最大缩放
 user-scalable  = no // 用户是否能缩放
-</code></pre><h3 id="rem与px转换技巧"><a href="#rem与px转换技巧" class="headerlink" title="rem与px转换技巧"></a>rem与px转换技巧</h3><blockquote>
-<p>1rem = 设计图宽度/20或10 px （根据情况而定）</p>
+</code></pre><h3 id="字体大小设置"><a href="#字体大小设置" class="headerlink" title="字体大小设置"></a>字体大小设置</h3><blockquote>
+<p>移动端页面字体大小原理：<br>设计图字体大小/设计图宽度 = 移动端字体大小/移动设备宽度</p>
 </blockquote>
+<p>做法：</p>
+<p>在入口文件中 设置移动设备根字体大小：document.documentElement.style.fontSize = window.innerWidth + “px”;// 例如320px</p>
+<p>mixin里进行字体转换：</p>
+<p>设计图中字体大小/1080设计图宽度 * 根字体大小（1rem）无论设备的宽度是多少px，都是1rem</p>
+<p>$pxValue/ $designFont-Size * 1rem;</p>
+<p>注意：因为html字体大小可能会影响字间距，所以要给body重置字体大小为12px</p>
 
       
     </div>
@@ -539,7 +545,7 @@ user-scalable  = no // 用户是否能缩放
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#移动端web的基础知识"><span class="nav-number">1.</span> <span class="nav-text">移动端web的基础知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#viewport的content各个值和属性"><span class="nav-number">2.</span> <span class="nav-text">viewport的content各个值和属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rem与px转换技巧"><span class="nav-number">3.</span> <span class="nav-text">rem与px转换技巧</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#移动端web的基础知识"><span class="nav-number">1.</span> <span class="nav-text">移动端web的基础知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#viewport的content各个值和属性"><span class="nav-number">2.</span> <span class="nav-text">viewport的content各个值和属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字体大小设置"><span class="nav-number">3.</span> <span class="nav-text">字体大小设置</span></a></li></ol></div>
             
 
           </div>
