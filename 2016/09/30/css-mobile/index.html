@@ -102,7 +102,7 @@ maximum-scale = 1.0, // 最大缩放
 user-scalable  = no // 用户是否能缩放
 字体大小设置
 移动端页面">
-<meta property="og:updated_time" content="2016-12-15T09:00:57.041Z">
+<meta property="og:updated_time" content="2017-02-04T07:45:08.728Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移动端开发注意事项">
 <meta name="twitter:description" content="移动端web的基础知识（mobile）font-size == 12px （pc）约等于
@@ -381,6 +381,12 @@ user-scalable  = no // 用户是否能缩放
 <p>设计图中字体大小/1080设计图宽度 * 根字体大小（1rem）无论设备的宽度是多少px，都是1rem</p>
 <p>$pxValue/ $designFont-Size * 1rem;</p>
 <p>注意：因为html字体大小可能会影响字间距，所以要给body重置字体大小为12px</p>
+<h3 id="ios兼容问题："><a href="#ios兼容问题：" class="headerlink" title="ios兼容问题："></a>ios兼容问题：</h3><ul>
+<li><p>非列表要用touchend 并且要执行e.preventDefault 因为touchstart有事件穿透问题会直接点击到下个页面的某个位置</p>
+</li>
+<li><p>列表用click会有一个300s延迟解决可用fastClick或者zepto的tap</p>
+</li>
+</ul>
 
       
     </div>
@@ -493,7 +499,7 @@ user-scalable  = no // 用户是否能缩放
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -545,7 +551,7 @@ user-scalable  = no // 用户是否能缩放
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#移动端web的基础知识"><span class="nav-number">1.</span> <span class="nav-text">移动端web的基础知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#viewport的content各个值和属性"><span class="nav-number">2.</span> <span class="nav-text">viewport的content各个值和属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字体大小设置"><span class="nav-number">3.</span> <span class="nav-text">字体大小设置</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#移动端web的基础知识"><span class="nav-number">1.</span> <span class="nav-text">移动端web的基础知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#viewport的content各个值和属性"><span class="nav-number">2.</span> <span class="nav-text">viewport的content各个值和属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字体大小设置"><span class="nav-number">3.</span> <span class="nav-text">字体大小设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ios兼容问题："><span class="nav-number">4.</span> <span class="nav-text">ios兼容问题：</span></a></li></ol></div>
             
 
           </div>
@@ -566,7 +572,7 @@ user-scalable  = no // 用户是否能缩放
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
