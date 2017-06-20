@@ -104,7 +104,7 @@ JSON里不能有单引号，全部用双引号
 
 检测地址
 t">
-<meta property="og:updated_time" content="2016-11-24T02:59:30.842Z">
+<meta property="og:updated_time" content="2017-03-03T09:28:46.998Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js小知识点总结">
 <meta name="twitter:description" content="原生JS操作transform属性例：1$(&apos;.pic-content&apos;)[0].style.webkitTransform = &quot;translateX(200px)&quot;
@@ -385,6 +385,11 @@ t">
 </blockquote>
 <p>*用法，首先引入Promise</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">import</span> &#123;<span class="built_in">Promise</span>&#125; <span class="keyword">from</span> <span class="string">'es6-promise'</span></div><div class="line"><span class="comment">//同时请求多个方法</span></div><div class="line"><span class="built_in">Promise</span>.all([</div><div class="line">     Account.getCard(<span class="keyword">this</span>.user.id),</div><div class="line">         Account.bankList()</div><div class="line">     ]).then(<span class="function">(<span class="params">values</span>)=&gt;</span> &#123;</div><div class="line">          <span class="keyword">this</span>.oldCardInfo = values[<span class="number">0</span>] || &#123;&#125;;</div><div class="line">          <span class="keyword">this</span>.banks = values[<span class="number">1</span>];</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>逻辑判断要严谨，例如在使用promise的时候：</p>
+<ol>
+<li>成功返回数据 - 数据为空的情况 then</li>
+<li>服务器返回error的情况 catch</li>
+</ol>
 
       
     </div>
@@ -497,7 +502,7 @@ t">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-count">24</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

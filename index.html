@@ -259,6 +259,161 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/20/vue-element构建流程/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="SunnyRui">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/uploads/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="cheerful learning">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="cheerful learning" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/06/20/vue-element构建流程/" itemprop="url">
+                  vue + element构建流程
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-20T18:08:44+08:00">
+                2017-06-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vue/" itemprop="url" rel="index">
+                    <span itemprop="name">vue</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="vue-element构建流程"><a href="#vue-element构建流程" class="headerlink" title="vue + element构建流程"></a>vue + element构建流程</h2><h4 id="1-执行安装步骤npm-vue的脚手架-vue-cli"><a href="#1-执行安装步骤npm-vue的脚手架-vue-cli" class="headerlink" title="1. 执行安装步骤npm vue的脚手架 vue-cli"></a>1. 执行安装步骤npm vue的脚手架 vue-cli</h4><h4 id="2-npm-element-ui"><a href="#2-npm-element-ui" class="headerlink" title="2. npm element-ui"></a>2. npm element-ui</h4><h3 id="3-在入口文件main-js执行"><a href="#3-在入口文件main-js执行" class="headerlink" title="3. 在入口文件main.js执行"></a>3. 在入口文件main.js执行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">import ElementUI from <span class="string">'element-ui'</span></div><div class="line">import <span class="string">'element-ui/lib/theme-default/index.css'</span></div><div class="line">Vue.use(ElementUI)</div></pre></td></tr></table></figure>
+<h3 id="4-babelrc中"><a href="#4-babelrc中" class="headerlink" title="4. .babelrc中"></a>4. .babelrc中</h3><blockquote>
+<p>按需引入组件的作用 安装插件 babel-plugin-component<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="string">"plugins"</span>: [</div><div class="line">  [</div><div class="line">    <span class="string">"component"</span>,</div><div class="line">    [</div><div class="line">      &#123;</div><div class="line">        <span class="string">"libraryName"</span>: <span class="string">"element-ui"</span>,</div><div class="line">        <span class="string">"styleLibraryName"</span>: <span class="string">"theme-default"</span></div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  ]</div><div class="line">],</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="5-此时app-vue中测试一下即可使用等element-ui的相关组件"><a href="#5-此时app-vue中测试一下即可使用等element-ui的相关组件" class="headerlink" title="5. 此时app.vue中测试一下即可使用等element-ui的相关组件"></a>5. 此时app.vue中测试一下即可使用<el-button>等element-ui的相关组件</el-button></h3><h3 id="6-使用scss-即-style中-lang-scss"><a href="#6-使用scss-即-style中-lang-scss" class="headerlink" title="6. 使用scss 即 style中 lang=scss"></a>6. 使用scss 即 style中 lang=scss</h3><h3 id="7-安装"><a href="#7-安装" class="headerlink" title="7. 安装"></a>7. 安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="string">"sass-loader"</span>: <span class="string">"^6.0.3"</span>,</div><div class="line"><span class="string">"scss-loader"</span>: <span class="string">"0.0.1"</span>,</div><div class="line"><span class="string">"style-loader"</span>: <span class="string">"^0.13.2"</span>,</div><div class="line"><span class="string">"node-sass"</span>: <span class="string">"^4.5.0"</span>,</div></pre></td></tr></table></figure>
+<blockquote>
+<p>不再需要配置，因为webpack已经配置了vue-loader</p>
+</blockquote>
+<h3 id="8-eslint也不需要安装，vue-cli脚手架已经给配置好"><a href="#8-eslint也不需要安装，vue-cli脚手架已经给配置好" class="headerlink" title="8. eslint也不需要安装，vue-cli脚手架已经给配置好"></a>8. eslint也不需要安装，vue-cli脚手架已经给配置好</h3><h3 id="9-配置文件输出目录public"><a href="#9-配置文件输出目录public" class="headerlink" title="9. 配置文件输出目录public"></a>9. 配置文件输出目录public</h3><blockquote>
+<p>config/index中配置将dist改成public</p>
+</blockquote>
+<h3 id="10-babel-preset-es2015-转换插件"><a href="#10-babel-preset-es2015-转换插件" class="headerlink" title="10. babel-preset-es2015 转换插件"></a>10. babel-preset-es2015 转换插件</h3><h3 id="配置："><a href="#配置：" class="headerlink" title="配置："></a>配置：</h3><blockquote>
+<p>router.js 就是配置一些url方便的配置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> default new Router(&#123;</div><div class="line">    mode: <span class="string">'history'</span>, // 显示正常的url</div><div class="line">    routes,</div><div class="line">    base: ‘./views’// url前缀的意思</div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="入口文件"><a href="#入口文件" class="headerlink" title="入口文件"></a>入口文件</h3><p>main.js 配置一些第三方插件等等</p>
+<h3 id="vuex"><a href="#vuex" class="headerlink" title="vuex"></a>vuex</h3><blockquote>
+<p>所有的vuex配置都在store/index.js里<br>  使用vuex只需 在 app.vue里引入store/index.js  import store from ‘./store/index’</p>
+</blockquote>
+<p>初次配置项目： 用webstorm创建一个express服务 然后 创建assets的前端项目</p>
+<p><strong> 构建的时候注意的问题：vue和vue-template-compiler的版本要对应 否则会编译错误<br>线上环境配置：devtool: config.build.productionSourceMap ? ‘#source-map’ : false, 可以在线上看到sourse-map像在本地看js代码一样方便调试 </strong></p>
+<p>写style注意：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;style lang=<span class="string">'scss'</span> rel=<span class="string">"stylesheet/scss"</span>&gt;加  rel=<span class="string">"stylesheet/scss"</span>是为了写样式的时候有提示</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/07/js-calender/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1648,267 +1803,9 @@ npm install --save-dev babel-core babel-loader babel-preset-es2015  babel-preset
 <blockquote>
 <p>解决： 删除.git文件中以.locked结尾的文件</p>
 </blockquote>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/10/11/初学webpack/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="SunnyRui">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/uploads/avatar.jpg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="cheerful learning">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="cheerful learning" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/11/初学webpack/" itemprop="url">
-                  初学webpack
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-11T14:34:28+08:00">
-                2016-10-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/webpack/" itemprop="url" rel="index">
-                    <span itemprop="name">webpack</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h2><p>原文 摘自与 慕课网的 <a href="http://www.imooc.com/article/10965" target="_blank" rel="external">快速入门 webpack</a></p>
-<p>查找资料，总结成笔记，对于大牛来说webpack简单易懂容易上手，但是对我这个小菜鸟来说，还需一番折腾与实践，已经看了数日，但是似乎没有捋顺其中的逻辑，所以写此文来细细琢磨一番！</p>
-<h3 id="什么是webpack"><a href="#什么是webpack" class="headerlink" title="什么是webpack"></a>什么是webpack</h3><blockquote>
-<p>webpack就是一个模块打包工具，处理模块之间的依赖，同时生成对应模块的静态资源</p>
-</blockquote>
-<h4 id="要点："><a href="#要点：" class="headerlink" title="要点："></a>要点：</h4><ul>
-<li>webpack 把项目中的所有资源看做是一个模块</li>
-<li>模块之间存在这一系列的依赖</li>
-<li>打包之后生成多个静态文件，涉及到代码拆分，提取，合并</li>
-</ul>
-<h3 id="webpack安装与配置"><a href="#webpack安装与配置" class="headerlink" title="webpack安装与配置"></a>webpack安装与配置</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>为了加快安装的速度，可以先安装淘宝镜像<br>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="external">https://registry.npm.taobao.org</a></p>
-<ul>
-<li><p>全局安装（以便全局调用：如webpack –config webpack.config.js）</p>
-<pre><code>npm install -g webpack
-</code></pre></li>
-<li><p>项目本地安装</p>
-<pre><code>npm install webpack (--save-dev 加不加即可,加上--save-dev会将配置写在package.json里如果不加直接安装在本地，不会写入package.json)
-// 本地安装是为了方便调用
-方式一：es6 语法
-import webpack from &quot;webpack&quot;
-方式二：es5 语法
-var webpack = require(&quot;webpack&quot;)
-</code></pre></li>
-</ul>
-<h3 id="webpack的基本配置"><a href="#webpack的基本配置" class="headerlink" title="webpack的基本配置"></a>webpack的基本配置</h3><ul>
-<li>创建配置文件（webpack.config.js）,执行webpack命令的时候，默认会执行这个文件</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">module.export = &#123;</div><div class="line">	entry: <span class="string">"app.js"</span>, // 入口文件</div><div class="line">	output: &#123;</div><div class="line">		path: <span class="string">'assets/'</span>, // 输出文件所在的目录</div><div class="line">		filename: <span class="string">'[name].bundle.js'</span>	// 输出文件名，name是入口文件定义的名字 输出文件夹是app.bundle.js</div><div class="line">		---------不确定</div><div class="line">	&#125;，</div><div class="line">	module： &#123;</div><div class="line">		loaders:[</div><div class="line">			// 使用babel-loader解析js或者jsx模块</div><div class="line">			&#123;<span class="built_in">test</span>:/\.js\.jsx%/, loader: <span class="string">'babel'</span>&#125;，</div><div class="line">			// 使用css-loader解析css模块</div><div class="line">			&#123;<span class="built_in">test</span>:/\.css$/, loader:<span class="string">'style!css'</span>&#125;</div><div class="line">		]</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>解析css另一种写法是：{test:/.css$/, loader:[‘style’, ‘css’]}</p>
-<h3 id="一个简单的例子"><a href="#一个简单的例子" class="headerlink" title="一个简单的例子"></a>一个简单的例子</h3><p><strong>以下是我实践过的例子，并标注了容易出错的地方</strong></p>
-<p>目录结构是这样的：</p>
-<ul>
-<li>index.html</li>
-<li>basic<ul>
-<li>assets</li>
-<li>node_modules</li>
-<li>app.js</li>
-<li>app.css</li>
-<li>package.json</li>
-<li>webpack.config.js</li>
-</ul>
-</li>
-</ul>
-<p>webpack.config.js<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">module.exports = &#123;</div><div class="line">    // 如果你有多个入口js文件，需要打包在一个文件夹中，这样写：</div><div class="line">    // entry: [<span class="string">'./app1.js'</span>, <span class="string">'./app2.js'</span>]</div><div class="line">    entry:<span class="string">'./app.js'</span>,</div><div class="line">    output:&#123;</div><div class="line">        path:<span class="string">'./assets'</span>,</div><div class="line">        filename:<span class="string">'[name].bundle.js'</span></div><div class="line">    &#125;,</div><div class="line">    module:&#123;</div><div class="line">        loaders :[ // 注意是loaders 不要少了s</div><div class="line">            &#123;<span class="built_in">test</span>:/\.js$/, loader:<span class="string">'babel'</span>&#125;, // 注意是<span class="built_in">test</span>不是text</div><div class="line">            &#123;<span class="built_in">test</span>:/\.css$/,loader:<span class="string">'style!css'</span>&#125;</div><div class="line">        ]</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
-<p> 如果关键字写错，会报这个错误<br><img src="../uploads/images/error1.png" alt="alt text"></p>
-<p>app.js</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">require(<span class="string">'./app.css'</span>);</div><div class="line">document.getElementById(<span class="string">'container'</span>).textContent = <span class="string">"App"</span>;</div></pre></td></tr></table></figure>
-<p>app.css</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">* &#123;</div><div class="line">    margin: 0;</div><div class="line">    padding: 0;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">#container &#123;</span></div><div class="line">    margin: 50px auto;</div><div class="line">    width: 50%;</div><div class="line">    height: 200px;</div><div class="line">    line-height: 200px;</div><div class="line">    border-radius: 5px;</div><div class="line">    box-shadow: 0 0 .5em <span class="comment">#000;</span></div><div class="line">    text-align: center;</div><div class="line">    font-size: 40px;</div><div class="line">    font-weight: bold;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>index.html</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">    &lt;title&gt;Title&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;div id=<span class="string">"container"</span>&gt;&lt;/div&gt;</div><div class="line">    &lt;script src=<span class="string">"./basic/assets/main.bundle.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-<blockquote>
-<p>需要注意的问题：</p>
 <ol>
-<li>要安装的模块有 css-loader, style-loader, babel-loader, babel-core</li>
-<li>webpack.config.js要和node_modules同级</li>
+<li>git rebase –continue<br>git rebase –abort<br>在Git update的时候如果出现了冲突 查看冲突文件 如果想撤销 执行 git rebase –abort<br>解决冲突之后 继续git rebase –continue</li>
 </ol>
-</blockquote>
-<h3 id="loaders相关"><a href="#loaders相关" class="headerlink" title="loaders相关"></a>loaders相关</h3><h3 id="loaders中-！-的含义"><a href="#loaders中-！-的含义" class="headerlink" title="loaders中 ！ 的含义"></a>loaders中 ！ 的含义</h3><blockquote>
-<p>代表加载器的流式调用，例如：</p>
-</blockquote>
-<p>{test：/.css.less$/, loader：’style!css!less’}</p>
-<p>意思是先使用less加载器来解释less文件，然后使用css加载器来解析less解析后的文件</p>
-<h4 id="loaders中的include和exclude"><a href="#loaders中的include和exclude" class="headerlink" title="loaders中的include和exclude"></a>loaders中的include和exclude</h4><blockquote>
-<p>include 表示必须要包含的文件或目录，exclude表示要排除的目录</p>
-</blockquote>
-<p>例如：<br>我们配置中要排除node_modules目录，写法如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">module：&#123;</div><div class="line">	loaders:[</div><div class="line">		&#123;</div><div class="line">			<span class="built_in">test</span>:/\.js$/,</div><div class="line">			loader: <span class="string">'babel'</span>, // 注意与<span class="built_in">test</span>可以合并写，也可以分开写</div><div class="line">			exclude: nodeModuleDir</div><div class="line">		&#125;</div><div class="line">	]</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>官方建议，最好用include,而且include最好是目录</p>
-<h3 id="resove-相关"><a href="#resove-相关" class="headerlink" title="resove 相关"></a>resove 相关</h3><h4 id="resove-alias"><a href="#resove-alias" class="headerlink" title="resove.alias"></a>resove.alias</h4><blockquote>
-<p>为模块路径设置别名，指定引入路径，减少搜索硬盘的时间, 配置与module同级</p>
-</blockquote>
-<p>例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">module.exports = &#123;</div><div class="line">   ...</div><div class="line">    resolve : &#123;</div><div class="line">	    <span class="built_in">alias</span>:&#123;</div><div class="line">		    jquery : <span class="string">'app/vender/jquery.min.js'</span></div><div class="line">	    &#125;</div><div class="line">    &#125;,</div><div class="line">   ...</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
-<h4 id="resolve-extensions"><a href="#resolve-extensions" class="headerlink" title="resolve.extensions"></a>resolve.extensions</h4><blockquote>
-<p>这个项目的作用是自动加上文件的扩展名</p>
-</blockquote>
-<p>比如你要引入scss文件:</p>
-<pre><code>require(&apos;syle.scss&apos;)
-</code></pre><p>配置之后，只需这样</p>
-<pre><code>require(&apos;style&apos;)
-</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">module.exports = &#123;</div><div class="line">   ...</div><div class="line">    resolve : &#123;</div><div class="line">	    <span class="built_in">alias</span>:&#123;</div><div class="line">		    jquery : <span class="string">'app/vender/jquery.min.js'</span></div><div class="line">	    &#125;,</div><div class="line">	   extensions: [<span class="string">""</span>, <span class="string">".webpack.js"</span>, <span class="string">".js"</span>, <span class="string">".scss"</span>]</div><div class="line">    &#125;,</div><div class="line">    ...</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<h3 id="externals"><a href="#externals" class="headerlink" title="externals"></a>externals</h3><blockquote>
-<p>当我们项目引入一些其他类库的时候，但是又不想类库被构建，就要配置这个参数</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">moduel.exports = &#123;</div><div class="line">	...</div><div class="line">	externals : &#123;</div><div class="line">		<span class="string">'react'</span> : <span class="string">'React'</span></div><div class="line">	&#125;,</div><div class="line">	...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>externals的key就是require是用的，例如require(‘react’) value表示window.React</p>
-<h3 id="devtool"><a href="#devtool" class="headerlink" title="devtool"></a>devtool</h3><blockquote>
-<p>提供了一些方式使代码调试更加方便，因为打包之后代码都是合并的，不利于调试和定位</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">moduel.exports = &#123;</div><div class="line">	...</div><div class="line">	devtools : <span class="string">'eval-source-map'</span>,</div><div class="line">	...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="抽取多入口文件的公共部分-CommonsChunkPlugin"><a href="#抽取多入口文件的公共部分-CommonsChunkPlugin" class="headerlink" title="抽取多入口文件的公共部分 CommonsChunkPlugin"></a>抽取多入口文件的公共部分 CommonsChunkPlugin</h3><blockquote>
-<p>此插件不用安装只需引入webpack模块</p>
-</blockquote>
-<p>我们重新建立一个文件夹叫common, 下面有两个入口文件 app1.js 和app2.js:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// common/app1.js</div><div class="line">console.log(<span class="string">'App1'</span>);</div></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// common/app2.js</div><div class="line">console.log(<span class="string">'App2'</span>);</div></pre></td></tr></table></figure>
-<p>打包之后生成app1.bundle.js, app2.bundle.js 这个两个文件里会有很多公共部分，我们可以把他们提取出来</p>
-<p>所以配置文件中的设置如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">var webpack = require(<span class="string">'webpack'</span>)</div><div class="line">module.exports = &#123;</div><div class="line">    // 如果你有多个入口js文件，需要打包在一个文件夹中，这样写：</div><div class="line">    // entry: [<span class="string">'./app1.js'</span>, <span class="string">'./app2.js'</span>]</div><div class="line">    entry:<span class="string">'./app.js'</span>,</div><div class="line">    output:&#123;</div><div class="line">        path:<span class="string">'./assets'</span>,</div><div class="line">        filename:<span class="string">'[name].bundle.js'</span></div><div class="line">    &#125;,</div><div class="line">    module:&#123;</div><div class="line">        loaders :[ // 注意是loaders 不要少了s</div><div class="line">            &#123;<span class="built_in">test</span>:/\.js$/, loader:<span class="string">'babel'</span>&#125;, // 注意是<span class="built_in">test</span>不是text</div><div class="line">            &#123;<span class="built_in">test</span>:/\.css$/,loader:<span class="string">'style!css'</span>&#125;</div><div class="line">        ]</div><div class="line">    &#125;，</div><div class="line">    plugins:[</div><div class="line">		// 实例引入的webpack</div><div class="line">		new webpack.optimize.CommonsChunkPlugin(<span class="string">'common/common.js'</span>)</div><div class="line">		// 会在assets下面自动建common文件夹并生成common.js</div><div class="line">	]</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<p>抽取出的公共js为common.js<br>查看app1.bundle.js就是模块中写的代码，公共部分都提取到common.js中了</p>
-<h3 id="extract-text-webpack-plugin-抽取css文件，打包成css-bundle"><a href="#extract-text-webpack-plugin-抽取css文件，打包成css-bundle" class="headerlink" title="extract-text-webpack-plugin 抽取css文件，打包成css bundle"></a>extract-text-webpack-plugin 抽取css文件，打包成css bundle</h3><p>默认情况下js中require的css文件会在浏览器预览的时候直接引入到index.html在head中生成style属于内联，如果想将css文件提取出来可以按照下面的配置去做：</p>
-<p> app.js<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">require(<span class="string">'./app.css'</span>);</div><div class="line">document.getElementById(<span class="string">'container'</span>).textContent = <span class="string">"App"</span>;</div></pre></td></tr></table></figure></p>
-<p> app2.js<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">require(<span class="string">'./app2.css'</span>);</div><div class="line">document.getElementById(<span class="string">'container'</span>).textContent = <span class="string">"App2"</span>;</div></pre></td></tr></table></figure></p>
-<p>app.css<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">* &#123;</div><div class="line">    margin: 0;</div><div class="line">    padding: 0;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">#container &#123;</span></div><div class="line">    margin: 50px auto;</div><div class="line">    width: 50%;</div><div class="line">    height: 200px;</div><div class="line">    line-height: 200px;</div><div class="line">    border-radius: 5px;</div><div class="line">    box-shadow: 0 0 .5em <span class="comment">#000;</span></div><div class="line">    text-align: center;</div><div class="line">    font-size: 40px;</div><div class="line">    font-weight: bold;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>app2.css<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">#container&#123;</span></div><div class="line">    background: <span class="comment">#ff0000;</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>webpack.config.js</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">var webpack = require(<span class="string">'webpack'</span>);</div><div class="line">// 安装这个插件 npm install</div><div class="line">var ExtractTextPlugin = require(<span class="string">'extract-text-webpack-plugin'</span>);</div><div class="line">module.exports = &#123;</div><div class="line">    entry: &#123;</div><div class="line">        app: <span class="string">'./app.js'</span>,</div><div class="line">        app2: <span class="string">'./app2.js'</span></div><div class="line">    &#125;,</div><div class="line">    output:&#123;</div><div class="line">        path:<span class="string">'./assets'</span>,</div><div class="line">        filename:<span class="string">'[name].bundle.js'</span></div><div class="line">    &#125;,</div><div class="line">    module:&#123;</div><div class="line">        loaders :[</div><div class="line">            &#123;<span class="built_in">test</span>:/\.js$/, loader:<span class="string">'babel'</span>&#125;,</div><div class="line">            &#123;<span class="built_in">test</span>:/\.css$/,loader:ExtractTextPlugin.extract(<span class="string">"style-loader"</span>, <span class="string">"css-loader"</span>)&#125;</div><div class="line">        ]</div><div class="line">    &#125;,</div><div class="line">    plugins:[</div><div class="line">        new webpack.optimize.CommonsChunkPlugin(<span class="string">'common/common.js'</span>),</div><div class="line">        new ExtractTextPlugin(<span class="string">"[name].css"</span>) // name对应的是入口的key</div><div class="line">    ]</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<p>最终在assets下面生成app.css和app2.css 可以引入到index.html中</p>
-<blockquote>
-<p>如果不使用这个插件就会自动引入，编译成内敛样式，如果使用这个插件就需要<strong>手动引入生成的文件啦</strong></p>
-</blockquote>
-<h3 id="extract-text-webpack-plugin"><a href="#extract-text-webpack-plugin" class="headerlink" title="extract-text-webpack-plugin"></a>extract-text-webpack-plugin</h3><blockquote>
-<p>这个插件还可以将入口引入的所有css都打包成一个文件</p>
-</blockquote>
-<p>例如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">var webpack = require(<span class="string">'webpack'</span>);</div><div class="line">// 安装这个插件 npm install</div><div class="line">var ExtractTextPlugin = require(<span class="string">'extract-text-webpack-plugin'</span>);</div><div class="line">module.exports = &#123;</div><div class="line">    entry: &#123;</div><div class="line">        app: <span class="string">'./app.js'</span>,</div><div class="line">        app2: <span class="string">'./app2.js'</span></div><div class="line">    &#125;,</div><div class="line">    output:&#123;</div><div class="line">        path:<span class="string">'./assets'</span>,</div><div class="line">        filename:<span class="string">'[name].bundle.js'</span></div><div class="line">    &#125;,</div><div class="line">    module:&#123;</div><div class="line">        loaders :[</div><div class="line">            &#123;<span class="built_in">test</span>:/\.js$/, loader:<span class="string">'babel'</span>&#125;,</div><div class="line">            &#123;<span class="built_in">test</span>:/\.css$/,loader:ExtractTextPlugin.extract(<span class="string">"style-loader"</span>, <span class="string">"css-loader"</span>)&#125;</div><div class="line">        ]</div><div class="line">    &#125;,</div><div class="line">    plugins:[</div><div class="line">        new webpack.optimize.CommonsChunkPlugin(<span class="string">'common/common.js'</span>),</div><div class="line">        new ExtractTextPlugin(<span class="string">"style.css"</span>,&#123;</div><div class="line">            allChunks: <span class="literal">true</span></div><div class="line">        &#125;) // name对应的是入口的key</div><div class="line">    ]</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<p>如果有多个入口文件，会将最后一个入口文件里的所有css打包，app.js里的文件被忽略</p>
-<h3 id="给文件添加版本号-HtmlWebpackPlugin插件"><a href="#给文件添加版本号-HtmlWebpackPlugin插件" class="headerlink" title="给文件添加版本号 HtmlWebpackPlugin插件"></a>给文件添加版本号 HtmlWebpackPlugin插件</h3><p><strong>线上发布</strong>时，防止浏览器缓存静态文件，所以给文件加版本号，有两</p>
-<p>例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">var webpack = require(<span class="string">'webpack'</span>);</div><div class="line">var ExtractTextPlugin = require(<span class="string">'extract-text-webpack-plugin'</span>);</div><div class="line">+ var HtmlWebpackPlugin = require(<span class="string">'html-webpack-plugin'</span>);</div><div class="line"></div><div class="line">module.exports = &#123;</div><div class="line">    entry: &#123;</div><div class="line">        app: <span class="string">'./app.js'</span>,</div><div class="line">        app2: <span class="string">'./app2.js'</span></div><div class="line">    &#125;,</div><div class="line">    // entry: <span class="string">'./app.js'</span>,</div><div class="line">    output:&#123;</div><div class="line">        path:<span class="string">'./assets'</span>,</div><div class="line">        +filename:<span class="string">'[name].[hash].bundle.js'</span>,</div><div class="line">        +publicPath:<span class="string">'http://rui-noworry.github.com/assets'</span></div><div class="line">    &#125;,</div><div class="line">    module:&#123;</div><div class="line">        loaders :[</div><div class="line">            &#123;<span class="built_in">test</span>:/\.js$/, loader:<span class="string">'babel'</span>&#125;,</div><div class="line">            // &#123;<span class="built_in">test</span>:/\.css$/, loader:<span class="string">"style!css"</span>&#125;</div><div class="line">            &#123;<span class="built_in">test</span>:/\.css$/,loader:ExtractTextPlugin.extract(<span class="string">"style-loader"</span>, <span class="string">"css-loader"</span>)&#125;</div><div class="line">        ]</div><div class="line">    &#125;,</div><div class="line">    plugins:[</div><div class="line">        new webpack.optimize.CommonsChunkPlugin(<span class="string">'common.js'</span>),</div><div class="line">        new ExtractTextPlugin(<span class="string">"style.css"</span>,&#123;</div><div class="line">            allChunks:<span class="literal">true</span></div><div class="line">        &#125;),</div><div class="line">       + new HtmlWebpackPlugin(&#123;</div><div class="line">            filename:<span class="string">'./index-release.html'</span>,</div><div class="line">            template: <span class="string">'./index.html'</span>,</div><div class="line">            inject: <span class="string">'body'</span></div><div class="line">        &#125;)</div><div class="line">    ]</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">    &lt;title&gt;Title&lt;/title&gt;</div><div class="line">    &lt;link <span class="built_in">type</span>=<span class="string">"text/css"</span> rel=<span class="string">"stylesheet"</span> href=<span class="string">"./assets/style.css"</span> /&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;div id=<span class="string">"container"</span>&gt;&lt;/div&gt;</div><div class="line">    &lt;script src=<span class="string">"./assets/common.js"</span>&gt;&lt;/script&gt;</div><div class="line">    &lt;script src=<span class="string">"./assets/app.26be6a63cd011a056420.bundle.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-<p><strong>注意，index.html一定要和node-module同级，否则会报babel错误</strong><br>这个插件加上版本号之后还会 自动加入到发布之后的html中，如果不用这个插件会生成hash文件但是不会自动加进发布之后的html文件</p>
-<h3 id="关于loader"><a href="#关于loader" class="headerlink" title="关于loader"></a>关于loader</h3><p>loader是支持链式执行的，并且由右向左执行，可以由sass-loader,css-loader,style-loader组成</p>
-<h3 id="布置一个本地服务器"><a href="#布置一个本地服务器" class="headerlink" title="布置一个本地服务器"></a>布置一个本地服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cnpm install -g webpack-dev-server</div><div class="line"></div><div class="line">// 设置文件移动目录</div><div class="line">webpack-dev-server --content-base basic/</div></pre></td></tr></table></figure>
-<p>如果在node_module所在目录可以直接执行webpack-dev-server<br>如果不在此目录，则需要指定目录，就执行webpack-dev-server –content-base basic/</p>
-<h3 id="webpack-config-js支持es6语法"><a href="#webpack-config-js支持es6语法" class="headerlink" title="webpack.config.js支持es6语法"></a>webpack.config.js支持es6语法</h3><p>依赖的插件：babel-loader，babel-core, babel-preset-es2015</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">module:&#123;</div><div class="line">       loaders :[</div><div class="line">           &#123;</div><div class="line">               <span class="built_in">test</span>:/\.js$/,</div><div class="line">               loader:<span class="string">'babel'</span>,</div><div class="line">               query:&#123;</div><div class="line">                   presets:[<span class="string">'es2015'</span>]</div><div class="line">               &#125;</div><div class="line">           &#125;,</div><div class="line">           // &#123;<span class="built_in">test</span>:/\.css$/, loader:<span class="string">"style!css"</span>&#125;</div><div class="line">           &#123;<span class="built_in">test</span>:/\.css$/,loader:ExtractTextPlugin.extract(<span class="string">"style-loader"</span>, <span class="string">"css-loader"</span>)&#125;</div><div class="line">       ]</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
-<p>注意：test 正则语法</p>
-<p><a href="https://github.com/rui-noworry/myWeb/tree/master/webpack-demo1" target="_blank" rel="external">github上Demo地址</a></p>
 
           
         
@@ -1983,7 +1880,7 @@ var webpack = require(&quot;webpack&quot;)
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-count">24</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
