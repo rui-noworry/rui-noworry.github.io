@@ -376,6 +376,7 @@
 <p>初次配置项目： 用webstorm创建一个express服务 然后 创建assets的前端项目</p>
 <p><strong> 构建的时候注意的问题：vue和vue-template-compiler的版本要对应 否则会编译错误<br>线上环境配置：devtool: config.build.productionSourceMap ? ‘#source-map’ : false, 可以在线上看到sourse-map像在本地看js代码一样方便调试 </strong></p>
 <p>写style注意：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;style lang=<span class="string">'scss'</span> rel=<span class="string">"stylesheet/scss"</span>&gt;加  rel=<span class="string">"stylesheet/scss"</span>是为了写样式的时候有提示</div></pre></td></tr></table></figure></p>
+<h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><p>安装插件DLLPlugin 线上将第三方的库打包 缓存到浏览器，不用重复下载，加快编译速度和浏览速度</p>
 
           
         
