@@ -104,7 +104,7 @@ JSON里不能有单引号，全部用双引号
 
 检测地址
 t">
-<meta property="og:updated_time" content="2017-03-03T09:28:46.998Z">
+<meta property="og:updated_time" content="2017-07-13T07:25:16.764Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js小知识点总结">
 <meta name="twitter:description" content="原生JS操作transform属性例：1$(&apos;.pic-content&apos;)[0].style.webkitTransform = &quot;translateX(200px)&quot;
@@ -390,6 +390,13 @@ t">
 <li>成功返回数据 - 数据为空的情况 then</li>
 <li>服务器返回error的情况 catch</li>
 </ol>
+<h3 id="mouseover-mouseenter-mouseout-mouseleave区别"><a href="#mouseover-mouseenter-mouseout-mouseleave区别" class="headerlink" title="mouseover mouseenter mouseout mouseleave区别"></a>mouseover mouseenter mouseout mouseleave区别</h3><blockquote>
+<p>mouseenter:<br>  事件在鼠标进入某个元素，或第一次进入这个元素的某个子元素时触发。一旦触发后，<br>  在mouseleave之前，鼠标在这个元素的子元素上触发mouseenter事件都不会触发这个元素的mouseenter事件。<br>  即：一旦进入，在子元素间的mouseenter不算是在本元素上的mouseenter。</p>
+</blockquote>
+<p>  mouseover:<br>  事件是必然冒泡的，一旦子元素mouseover了，本元素必然mouseover（除非子元素上禁止冒泡了）<br>  (在子元素上移动必然一直触发mouseover和mouseout)</p>
+<h3 id="target"><a href="#target" class="headerlink" title="target"></a>target</h3><blockquote>
+<p>获取dom时间的 当前 触发对象 e.currentTarget</p>
+</blockquote>
 
       
     </div>
@@ -554,7 +561,7 @@ t">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#原生JS操作transform属性"><span class="nav-number">1.</span> <span class="nav-text">原生JS操作transform属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JS遍历Dom节点"><span class="nav-number">2.</span> <span class="nav-text">JS遍历Dom节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Json-相关"><span class="nav-number">3.</span> <span class="nav-text">Json 相关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#this指向"><span class="nav-number">4.</span> <span class="nav-text">this指向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#promise"><span class="nav-number">5.</span> <span class="nav-text">promise</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#原生JS操作transform属性"><span class="nav-number">1.</span> <span class="nav-text">原生JS操作transform属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JS遍历Dom节点"><span class="nav-number">2.</span> <span class="nav-text">JS遍历Dom节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Json-相关"><span class="nav-number">3.</span> <span class="nav-text">Json 相关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#this指向"><span class="nav-number">4.</span> <span class="nav-text">this指向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#promise"><span class="nav-number">5.</span> <span class="nav-text">promise</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mouseover-mouseenter-mouseout-mouseleave区别"><span class="nav-number">6.</span> <span class="nav-text">mouseover mouseenter mouseout mouseleave区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#target"><span class="nav-number">7.</span> <span class="nav-text">target</span></a></li></ol></div>
             
 
           </div>
