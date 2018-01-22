@@ -259,6 +259,332 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/30/css-mobile/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="SunnyRui">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/uploads/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="cheerful learning">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="cheerful learning" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/30/css-mobile/" itemprop="url">
+                  移动端开发注意事项
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-09-30T14:38:02+08:00">
+                2016-09-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="移动端web的基础知识"><a href="#移动端web的基础知识" class="headerlink" title="移动端web的基础知识"></a>移动端web的基础知识</h3><pre><code>（mobile）font-size == 12px （pc）约等于
+</code></pre><h3 id="viewport的content各个值和属性"><a href="#viewport的content各个值和属性" class="headerlink" title="viewport的content各个值和属性"></a>viewport的content各个值和属性</h3><pre><code>width=device-width, // 页面宽度=设备宽度
+initial-scale = 1.0，// 初始缩放
+maximum-scale = 1.0, // 最大缩放
+user-scalable  = no // 用户是否能缩放
+</code></pre><h3 id="字体大小设置"><a href="#字体大小设置" class="headerlink" title="字体大小设置"></a>字体大小设置</h3><blockquote>
+<p>移动端页面字体大小原理：<br>设计图字体大小/设计图宽度 = 移动端字体大小/移动设备宽度</p>
+</blockquote>
+<p>做法：</p>
+<p>在入口文件中 设置移动设备根字体大小：document.documentElement.style.fontSize = window.innerWidth + “px”;// 例如320px</p>
+<p>mixin里进行字体转换：</p>
+<p>设计图中字体大小/1080设计图宽度 * 根字体大小（1rem）无论设备的宽度是多少px，都是1rem</p>
+<p>$pxValue/ $designFont-Size * 1rem;</p>
+<p>注意：因为html字体大小可能会影响字间距，所以要给body重置字体大小为12px</p>
+<h3 id="ios兼容问题："><a href="#ios兼容问题：" class="headerlink" title="ios兼容问题："></a>ios兼容问题：</h3><ul>
+<li><p>非列表要用touchend 并且要执行e.preventDefault 因为touchstart有事件穿透问题会直接点击到下个页面的某个位置</p>
+</li>
+<li><p>列表用click会有一个300s延迟解决可用fastClick或者zepto的tap</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/29/css-media/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="SunnyRui">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/uploads/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="cheerful learning">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="cheerful learning" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/29/css-media/" itemprop="url">
+                  css响应式
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-09-29T18:19:17+08:00">
+                2016-09-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<ul>
+<li>media querie（@media）允许在不改变内容的情况下，改变布局以适应不同设备浏览器情况</li>
+<li>关键字：not and only screen 媒体类型 min-width媒体特性</li>
+</ul>
+</blockquote>
+<ol>
+<li>在link中写法</li>
+</ol>
+<pre><code>&lt;link rel=”stylesheet” type=”text/css” href=”styleA.css” media=”screen and (min-width:400px)” /&gt;
+
+&lt;link rel=”stylesheet” type=”text/css” href=”styleA.css” media=”screen and (min-width:400px) and (max-width=800px)” /&gt;
+
+&lt;link rel=”stylesheet” type=”text/css” href=”styleA.css” media=”only screen and (-webkit-min-device-pixel-ratio:2)” /&gt;
+</code></pre><ol>
+<li>在css中写法</li>
+</ol>
+<pre><code>@media only screen and (min-width=1024px){ .content{ width:1000px; martin:auto} }
+@media only screen and (min-width=400px) and (max-width=1024px){
+     .right{
+        width:0px
+    }
+    .left{
+        width:30%
+    }
+    .right{
+        width:65%
+    } }
+@media only screen and (max-width=400px) {
+     .right,.left,.right{
+        width:98%; height:200px
+    } }
+</code></pre><ol>
+<li><p>hack ie9以下不支持 就加这个 js引用</p>
+<pre><code>&lt;script src=http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js&gt;&lt;/script&gt;
+</code></pre></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">注意事项：</div><div class="line">头部一定要加： &lt;meta content:”width=device-width,initial-scale=1” name=”viewport” /&gt;</div><div class="line">Html&#123;font-size:62.5%; &#125;初始化字体为10px（1rem=10px便于计算）例如:body&#123;font-size:20px; font-size:2rem;&#125;</div><div class="line">一定要设置max-width/min-width</div><div class="line">Box-sizzing:border-box;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/29/position/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -958,7 +1284,7 @@ height：100%
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">24</span>
+              <span class="site-state-item-count">26</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -966,7 +1292,7 @@ height：100%
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -975,7 +1301,7 @@ height：100%
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1015,7 +1341,7 @@ height：100%
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
